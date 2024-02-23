@@ -2,6 +2,9 @@ import re
 
 tokens = [
     ('CLASS', r'(?<=\bclass\s)([a-zA-Z_]\w*)\b'),
+    ('DATA_TYPE', r'\b(bool|signed char|short|long|long long|int|float|double|char|void|unsigned char|unsigned short|'
+                  r'unsigned int|unsigned long|unsigned long long|long double|wchar_t|char8_t|char16_t|char32_t|string|'
+                  r'uint32_t|size_t)\b'),
     ('KEYWORD', r'\b(if|else|while|for|return|class|struct|using|namespace|system|break|continue|do|switch|case|'
                 r'default|std::swap|private|public|protected|const|override|virtual|typename|typedef|template|'
                 r'delete|malloc|calloc|realloc|sizeof|NULL|printf|new|static|operator|this|friend|auto|nullptr|'
@@ -26,15 +29,15 @@ tokens = [
     ('ARITHMETIC_OPERATOR', r'(\+\+|\-\-|\+=|-=|\*=|/=|%=|[-+/=%])'),
     ('TERNARY_OPERATOR', r'\?'),
     ('ASSIGMENT_OPERATOR', r'='),
-    ('DATA_TYPE', r'\b(bool|signed char|short|long|long long|int|float|double|char|void|unsigned char|unsigned short|'
-                  r'unsigned int|unsigned long|unsigned long long|long double|wchar_t|char8_t|char16_t|char32_t|string|'
-                  r'uint32_t|size_t)\b'),
     ('STREAM_CLASS', r'\b(ifstream|ofstream|ostream|iostream)\b'),
     ('STANDARD_FUNCTION', r'\b(strcpy|strlen|strcat|strstr|strtok|sprintf|strcmp|strchr|strrchr)\b'),
-    ('FUNCTION', r'\b(pow|sqrt|sin|cos|log|exp|round)\b'),
+    ('MATH_FUNCTION', r'\b(pow|sqrt|sin|cos|log|exp|round)\b'),
     ('CONTAINER', r'\b(vector|list|map|unordered_map|multimap|deque|queue|stack|set|unordered_set|multiset|bitset)\b'),
     ('SPECIAL_SYMBOL', r'[#$№@]'),
-    ('HEADER_FILE', r'\b[a-zA-Z_]\w*\.h\b')
+    ('HEADER_FILE', r'\b[a-zA-Z_]\w*\.h\b'),
+    ('CLASS_CREATION_OBJECT', r'\b[A-Z][a-zA-Z]*\s'),
+    ('CONSTRUCTOR', r'\b[A-Z][a-zA-Z]*\b'),
+    ('VARIABLE', r'[a-zA-Z_]\w*'),
 ]
 
 
