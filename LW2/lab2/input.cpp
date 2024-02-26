@@ -13,6 +13,7 @@ public:
     int area() const { return width * height; } // comments
 };
 int main() {
+    float a = 3.4;
     Rectangle rect(5, 3);
     std::cout << "Width: " << rect.getWidth() << std::endl;
     std::cout << "Height: " << rect.getHeight() << std::endl;

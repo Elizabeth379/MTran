@@ -9,6 +9,7 @@ tokens = [
                 r'default|std::swap|private|public|protected|const|override|virtual|typename|typedef|template|'
                 r'delete|malloc|calloc|realloc|sizeof|NULL|printf|new|static|operator|this|friend|auto|nullptr|'
                 r'try|catch|exception|setlocale)\b'),
+    ('STRING', r'\"([^\"]*)\"'),
     ('PREPROCESSOR_DIRECTIVE', r'#include'),
     ('STANDARD_LIBRARY', r'<\w+>'),
     ('COMMA', r','),
@@ -39,6 +40,8 @@ tokens = [
     ('CONSTRUCTOR', r'\b[A-Z][a-zA-Z]*\b'),
     ('FUNCTION', r'(\w+)(?=\()'),
     ('VARIABLE', r'[a-zA-Z_]\w*'),
+    ('FLOAT', r'\b\d+\.\d+\b'),
+    ('INTEGER', r'\b\d+\b'),
 ]
 
 
