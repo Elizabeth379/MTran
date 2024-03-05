@@ -1,187 +1,467 @@
-Number		Element		Category
-1			#include			PREPROCESSOR_DIRECTIVE
-2			<iostream>			STANDARD_LIBRARY
-3			#include			PREPROCESSOR_DIRECTIVE
-4			constants.h			HEADER_FILE
-5			class			KEYWORD
-6			Rectangle			CLASS
-7			{			PARENTHESIS
-8			private			KEYWORD
-9			:			COLON
-10			int			DATA_TYPE
-11			width			VARIABLE
-12			;			END_OF_CONSTRUCTION
-13			int			DATA_TYPE
-14			height			VARIABLE
-15			;			END_OF_CONSTRUCTION
-16			public			KEYWORD
-17			:			COLON
-18			Rectangle			CONSTRUCTOR
-19			(			PARENTHESIS
-20			int			DATA_TYPE
-21			w			VARIABLE
-22			,			COMMA
-23			int			DATA_TYPE
-24			h			VARIABLE
-25			)			PARENTHESIS
-26			{			PARENTHESIS
-27			}			PARENTHESIS
-28			void			DATA_TYPE
-29			setWidth			FUNCTION
-30			(			PARENTHESIS
-31			int			DATA_TYPE
-32			w			VARIABLE
-33			)			PARENTHESIS
-34			{			PARENTHESIS
-35			width			VARIABLE
-36			=			ASSIGMENT_OPERATOR
-37			w			VARIABLE
-38			;			END_OF_CONSTRUCTION
-39			}			PARENTHESIS
-40			void			DATA_TYPE
-41			setHeight			FUNCTION
-42			(			PARENTHESIS
-43			int			DATA_TYPE
-44			h			VARIABLE
-45			)			PARENTHESIS
-46			{			PARENTHESIS
-47			height			VARIABLE
-48			=			ASSIGMENT_OPERATOR
-49			h			VARIABLE
-50			;			END_OF_CONSTRUCTION
-51			}			PARENTHESIS
-52			int			DATA_TYPE
-53			getWidth			FUNCTION
-54			(			PARENTHESIS
-55			)			PARENTHESIS
-56			const			KEYWORD
-57			{			PARENTHESIS
-58			return			KEYWORD
-59			width			VARIABLE
-60			;			END_OF_CONSTRUCTION
-61			}			PARENTHESIS
-62			int			DATA_TYPE
-63			getHeight			FUNCTION
-64			(			PARENTHESIS
-65			)			PARENTHESIS
-66			const			KEYWORD
-67			{			PARENTHESIS
-68			return			KEYWORD
-69			height			VARIABLE
-70			;			END_OF_CONSTRUCTION
-71			}			PARENTHESIS
-72			int			DATA_TYPE
-73			area			FUNCTION
-74			(			PARENTHESIS
-75			)			PARENTHESIS
-76			const			KEYWORD
-77			{			PARENTHESIS
-78			return			KEYWORD
-79			width			VARIABLE
-80			*			ARITHMETIC_OPERATOR
-81			height			VARIABLE
-82			;			END_OF_CONSTRUCTION
-83			}			PARENTHESIS
-84			// comments			COMMENT
-85			}			PARENTHESIS
-86			;			END_OF_CONSTRUCTION
-87			int			DATA_TYPE
-88			main			FUNCTION
-89			(			PARENTHESIS
-90			)			PARENTHESIS
-91			{			PARENTHESIS
-92			float			DATA_TYPE
-93			a			VARIABLE
-94			=			ASSIGMENT_OPERATOR
-95			3.4			FLOAT
-96			;			END_OF_CONSTRUCTION
-97			Rectangle 			CLASS_CREATION_OBJECT
-98			rect			FUNCTION
-99			(			PARENTHESIS
-100			5			INTEGER
-101			,			COMMA
-102			3			INTEGER
-103			)			PARENTHESIS
-104			;			END_OF_CONSTRUCTION
-105			std			NAMESPACE
-106			::			DOUBLE_COLON
-107			cout			OUTPUT
-108			<<			OPERATOR
-109			"Width: "			STRING
-110			<<			OPERATOR
-111			rect			VARIABLE
-112			.			OPERATOR
-113			getWidth			FUNCTION
-114			(			PARENTHESIS
-115			)			PARENTHESIS
-116			<<			OPERATOR
-117			std			NAMESPACE
-118			::			DOUBLE_COLON
-119			endl			OUTPUT_MANIPULATOR
-120			;			END_OF_CONSTRUCTION
-121			std			NAMESPACE
-122			::			DOUBLE_COLON
-123			cout			OUTPUT
-124			<<			OPERATOR
-125			"Height: "			STRING
-126			<<			OPERATOR
-127			rect			VARIABLE
-128			.			OPERATOR
-129			getHeight			FUNCTION
-130			(			PARENTHESIS
-131			)			PARENTHESIS
-132			<<			OPERATOR
-133			std			NAMESPACE
-134			::			DOUBLE_COLON
-135			endl			OUTPUT_MANIPULATOR
-136			;			END_OF_CONSTRUCTION
-137			std			NAMESPACE
-138			::			DOUBLE_COLON
-139			cout			OUTPUT
-140			<<			OPERATOR
-141			"Area of the rectangle: "			STRING
-142			<<			OPERATOR
-143			rect			VARIABLE
-144			.			OPERATOR
-145			area			FUNCTION
-146			(			PARENTHESIS
-147			)			PARENTHESIS
-148			<<			OPERATOR
-149			std			NAMESPACE
-150			::			DOUBLE_COLON
-151			endl			OUTPUT_MANIPULATOR
-152			;			END_OF_CONSTRUCTION
-153			rect			VARIABLE
-154			.			OPERATOR
-155			setWidth			FUNCTION
-156			(			PARENTHESIS
-157			7			INTEGER
-158			)			PARENTHESIS
-159			;			END_OF_CONSTRUCTION
-160			rect			VARIABLE
-161			.			OPERATOR
-162			setHeight			FUNCTION
-163			(			PARENTHESIS
-164			4			INTEGER
-165			)			PARENTHESIS
-166			;			END_OF_CONSTRUCTION
-167			std			NAMESPACE
-168			::			DOUBLE_COLON
-169			cout			OUTPUT
-170			<<			OPERATOR
-171			"Updated area of the rectangle: "			STRING
-172			<<			OPERATOR
-173			rect			VARIABLE
-174			.			OPERATOR
-175			area			FUNCTION
-176			(			PARENTHESIS
-177			)			PARENTHESIS
-178			<<			OPERATOR
-179			std			NAMESPACE
-180			::			DOUBLE_COLON
-181			endl			OUTPUT_MANIPULATOR
-182			;			END_OF_CONSTRUCTION
-183			return			KEYWORD
-184			0			INTEGER
-185			;			END_OF_CONSTRUCTION
-186			}			PARENTHESIS
+  Number  Category         Value
+--------  ---------------  ----------------------------
+       1  Special symbol   #
+       2  Keyword          include
+       3  Identifier       <iostream>
+       4  ~~~ERROR!!!      `
+       5  ~~~ERROR!!!      ▽
+       6  Keyword          class
+       7  Identifier       Cloud
+       8  Separator        {
+       9  Keyword          private
+      10  Operator         :
+      11  Data type        int
+      12  Identifier       density
+      13  Separator        ;
+      14  Data type        int
+      15  Identifier       volume
+      16  Separator        ;
+      17  Keyword          public
+      18  Operator         :
+      19  Identifier       Cloud
+      20  Separator        (
+      21  Data type        int
+      22  Identifier       d
+      23  Separator        ,
+      24  Data type        int
+      25  Identifier       v
+      26  Separator        )
+      27  Separator        {
+      28  Separator        }
+      29  Data type        void
+      30  Identifier       setDensity
+      31  Separator        (
+      32  Data type        int
+      33  Identifier       d
+      34  Separator        )
+      35  Separator        {
+      36  Identifier       density
+      37  Operator         =
+      38  Identifier       d
+      39  Separator        ;
+      40  Separator        }
+      41  Data type        void
+      42  Identifier       setVolume
+      43  Separator        (
+      44  Data type        int
+      45  Identifier       v
+      46  Separator        )
+      47  Separator        {
+      48  Identifier       volume
+      49  Operator         =
+      50  Identifier       v
+      51  Separator        ;
+      52  Separator        }
+      53  Data type        int
+      54  Identifier       getDensity
+      55  Separator        (
+      56  Separator        )
+      57  Keyword          const
+      58  Separator        {
+      59  Keyword          return
+      60  Identifier       density
+      61  Separator        ;
+      62  Separator        }
+      63  Data type        int
+      64  Identifier       getSquare
+      65  Separator        (
+      66  Separator        )
+      67  Keyword          const
+      68  Separator        {
+      69  Keyword          return
+      70  Identifier       square
+      71  Separator        ;
+      72  Separator        }
+      73  Data type        int
+      74  Identifier       weight
+      75  Separator        (
+      76  Separator        )
+      77  Keyword          const
+      78  Separator        {
+      79  Keyword          return
+      80  Identifier       density
+      81  Operator         *
+      82  Identifier       volume
+      83  Separator        ;
+      84  Separator        }
+      85  Separator        }
+      86  Separator        ;
+      87  Keyword          struct
+      88  Identifier       Bird
+      89  Separator        {
+      90  Data type        char
+      91  Identifier       name
+      92  Operator         [
+      93  Numeric Literal  30
+      94  Operator         ]
+      95  Separator        ;
+      96  Data type        int
+      97  Identifier       speed
+      98  Separator        ;
+      99  Separator        }
+     100  Separator        ;
+     101  Data type        int
+     102  Identifier       main
+     103  Separator        (
+     104  Separator        )
+     105  Separator        {
+     106  Data type        float
+     107  Identifier       a
+     108  Operator         =
+     109  Numeric Literal  3.79
+     110  Separator        ;
+     111  Data type        int
+     112  Operator         *
+     113  Identifier       ptr
+     114  Operator         =
+     115  Literal Pointer  nullptr
+     116  Separator        ;
+     117  Data type        auto
+     118  Identifier       z
+     119  Operator         =
+     120  Binary Literal   0B001101
+     121  Data type        int
+     122  Identifier       x
+     123  Operator         =
+     124  Numeric Literal  2
+     125  Separator        ;
+     126  Data type        int
+     127  Identifier       y
+     128  Operator         =
+     129  Numeric Literal  3
+     130  Separator        ;
+     131  Identifier       x
+     132  Operator         =
+     133  Identifier       x
+     134  Operator         +
+     135  Identifier       y
+     136  Separator        ;
+     137  Keyword          if
+     138  Separator        (
+     139  Identifier       x
+     140  Operator         >
+     141  Numeric Literal  5
+     142  Separator        )
+     143  Separator        {
+     144  Identifier       printf
+     145  Separator        (
+     146  Separator        "
+     147  String Literal   x > 5
+     148  Separator        \n
+     149  Separator        "
+     150  Separator        )
+     151  Separator        ;
+     152  Separator        }
+     153  Keyword          else
+     154  Separator        {
+     155  Identifier       printf
+     156  Separator        (
+     157  Separator        "
+     158  String Literal   x < 5
+     159  Separator        \n
+     160  Separator        "
+     161  Separator        )
+     162  Separator        ;
+     163  Separator        }
+     164  Identifier       Cloud
+     165  Identifier       storm
+     166  Separator        (
+     167  Numeric Literal  12
+     168  Separator        ,
+     169  Numeric Literal  40
+     170  Separator        )
+     171  Separator        ;
+     172  Namespace        std
+     173  Operator         ::
+     174  Keyword          cout
+     175  Operator         <<
+     176  Separator        "
+     177  String Literal   Density:
+     178  Separator        "
+     179  Operator         <<
+     180  Identifier       storm
+     181  Operator         .
+     182  Identifier       getDensity
+     183  Separator        (
+     184  Separator        )
+     185  Operator         <<
+     186  Namespace        std
+     187  Operator         ::
+     188  Keyword          endl
+     189  Separator        ;
+     190  Namespace        std
+     191  Operator         ::
+     192  Keyword          cout
+     193  Operator         <<
+     194  Separator        "
+     195  String Literal   Volume:
+     196  Separator        "
+     197  Operator         <<
+     198  Identifier       storm
+     199  Operator         .
+     200  Identifier       getHeight
+     201  Separator        (
+     202  Separator        )
+     203  Operator         <<
+     204  Namespace        std
+     205  Operator         ::
+     206  Keyword          endl
+     207  Separator        ;
+     208  Namespace        std
+     209  Operator         ::
+     210  Keyword          cout
+     211  Operator         <<
+     212  Separator        "
+     213  String Literal   Weight of the cloud:
+     214  Separator        "
+     215  Operator         <<
+     216  Identifier       storm
+     217  Operator         .
+     218  Identifier       weight
+     219  Separator        (
+     220  Separator        )
+     221  Operator         <<
+     222  Namespace        std
+     223  Operator         ::
+     224  Keyword          endl
+     225  Separator        ;
+     226  Identifier       rect
+     227  Operator         .
+     228  Identifier       setDensity
+     229  Separator        (
+     230  Numeric Literal  7
+     231  Separator        )
+     232  Separator        ;
+     233  Identifier       rect
+     234  Operator         .
+     235  Identifier       setVolume
+     236  Separator        (
+     237  Numeric Literal  4
+     238  Separator        )
+     239  Separator        ;
+     240  Namespace        std
+     241  Operator         ::
+     242  Keyword          cout
+     243  Operator         <<
+     244  Separator        "
+     245  String Literal   Updated weight of the cloud:
+     246  Separator        "
+     247  Operator         <<
+     248  Identifier       storm
+     249  Operator         .
+     250  Identifier       weight
+     251  Separator        (
+     252  Separator        )
+     253  Operator         <<
+     254  Namespace        std
+     255  Operator         ::
+     256  Keyword          endl
+     257  Separator        ;
+     258  Data type        int
+     259  Identifier       numbers
+     260  Operator         [
+     261  Numeric Literal  4
+     262  Operator         ]
+     263  Operator         =
+     264  Separator        {
+     265  Numeric Literal  1E+10
+     266  Separator        ,
+     267  ~~~ERROR!!!      3.8.0.2.3
+     268  Separator        ,
+     269  Numeric Literal  3
+     270  Separator        ,
+     271  Numeric Literal  4.34
+     272  Separator        }
+     273  Separator        ;
+     274  Data type        double
+     275  ~~~ERROR!!!      22twentyTwo
+     276  Operator         =
+     277  Numeric Literal  22.22
+     278  Separator        ;
+     279  Data type        char
+     280  Identifier       letters
+     281  Operator         [
+     282  Numeric Literal  2
+     283  Operator         ]
+     284  Operator         =
+     285  Separator        {
+     286  Separator        '
+     287  String Literal   a
+     288  Separator        '
+     289  Separator        ,
+     290  Separator        '
+     291  Separator        \n
+     292  Separator        '
+     293  Separator        }
+     294  Separator        ;
+     295  Keyword          struct
+     296  Identifier       Bird
+     297  Identifier       nightingale
+     298  Operator         =
+     299  Separator        {
+     300  Separator        "
+     301  String Literal   Earl
+     302  Separator        "
+     303  Separator        ,
+     304  Numeric Literal  30
+     305  Separator        }
+     306  Separator        ;
+     307  Identifier       printf
+     308  Separator        (
+     309  Separator        "
+     310  String Literal   Bird's name: %s
+     311  Separator        \n
+     312  Separator        "
+     313  Separator        ,
+     314  Identifier       nightingale
+     315  Operator         .
+     316  Identifier       name
+     317  Separator        )
+     318  Separator        ;
+     319  Identifier       printf
+     320  Separator        (
+     321  Separator        "
+     322  String Literal   Bird's speed: %d
+     323  Separator        \n
+     324  Separator        "
+     325  Separator        ,
+     326  Identifier       nightingale
+     327  Operator         .
+     328  Identifier       speed
+     329  Separator        )
+     330  Separator        ;
+     331  Keyword          for
+     332  Separator        (
+     333  Data type        int
+     334  Identifier       i
+     335  Operator         =
+     336  Numeric Literal  0
+     337  Separator        ;
+     338  Identifier       i
+     339  Operator         <
+     340  Numeric Literal  4
+     341  Separator        ;
+     342  Identifier       i
+     343  Operator         ++
+     344  Separator        )
+     345  Separator        {
+     346  Namespace        std
+     347  Operator         ::
+     348  Keyword          cout
+     349  Operator         <<
+     350  Identifier       numbers
+     351  Operator         [
+     352  Identifier       i
+     353  Operator         ]
+     354  Operator         <<
+     355  Separator        "
+     356  Separator        \n
+     357  Separator        "
+     358  Separator        ;
+     359  Separator        }
+     360  Data type        int
+     361  Identifier       j
+     362  ~~~ERROR!!!      #=
+     363  Numeric Literal  0
+     364  Separator        ;
+     365  Keyword          while
+     366  Separator        (
+     367  Identifier       j
+     368  Operator         <
+     369  Numeric Literal  2
+     370  Separator        )
+     371  Separator        {
+     372  Identifier       printf
+     373  Separator        (
+     374  Separator        "
+     375  String Literal   %c
+     376  Separator        "
+     377  Separator        ,
+     378  Identifier       letters
+     379  Operator         [
+     380  Identifier       j
+     381  Operator         ]
+     382  Separator        )
+     383  Separator        ;
+     384  Identifier       j
+     385  Operator         ++
+     386  Separator        ;
+     387  Separator        }
+     388  Data type        double
+     389  Keyword          switch
+     390  Operator         =
+     391  Numeric Literal  10
+     392  Separator        ;
+     393  Data type        char
+     394  Identifier       word
+     395  Operator         =
+     396  Separator        '
+     397  String Literal   C
+     398  Separator        '
+     399  Separator        ;
+     400  Keyword          switch
+     401  Separator        (
+     402  Identifier       word
+     403  Separator        )
+     404  Separator        {
+     405  Keyword          case
+     406  Separator        '
+     407  String Literal   A
+     408  Separator        '
+     409  Operator         :
+     410  Identifier       printf
+     411  Separator        (
+     412  Separator        "
+     413  String Literal   It's A!
+     414  Separator        \n
+     415  Separator        "
+     416  Separator        )
+     417  Separator        ;
+     418  Keyword          break
+     419  Separator        ;
+     420  Keyword          case
+     421  Separator        '
+     422  String Literal   B
+     423  Separator        '
+     424  Operator         :
+     425  Identifier       printf
+     426  Separator        (
+     427  Separator        "
+     428  String Literal   It's B!
+     429  Separator        \n
+     430  Separator        "
+     431  Separator        )
+     432  Separator        ;
+     433  Keyword          break
+     434  Separator        ;
+     435  Keyword          case
+     436  Separator        '
+     437  String Literal   C
+     438  Separator        '
+     439  Operator         :
+     440  Identifier       printf
+     441  Separator        (
+     442  Separator        "
+     443  String Literal   It's C!
+     444  Separator        \n
+     445  Separator        "
+     446  Separator        )
+     447  Separator        ;
+     448  Keyword          break
+     449  Separator        ;
+     450  Keyword          default
+     451  Operator         :
+     452  Identifier       printf
+     453  Separator        (
+     454  Separator        "
+     455  String Literal   It's nothing(
+     456  Separator        \n
+     457  Separator        "
+     458  Separator        )
+     459  Separator        ;
+     460  Separator        }
+     461  Keyword          return
+     462  Numeric Literal  0
+     463  Separator        ;
+     464  Separator        }
+     465  Operator         ========
