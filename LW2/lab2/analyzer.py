@@ -2,11 +2,11 @@ import re
 from constants import KEYWORDS, INVALID_OPERATORS, OPERATORS, SPECIAL_SYMBOLS, SEPARATORS, TYPES
 
 
-class LexicalAnalyzer:
+class Analyzer:
 
     @staticmethod
     def analyze(text: str):
-        text = LexicalAnalyzer._remove_comments(text)
+        text = Analyzer._remove_comments(text)
 
         result = []
         position = 0
@@ -28,16 +28,16 @@ class LexicalAnalyzer:
 
             if current_char == '0' and (text[position + 1] == 'b' or text[position + 1] == 'B'):
                 binary_literal = text[position] + text[position + 1] + \
-                                 LexicalAnalyzer._read_while_with_one(text, position + 2, lambda c: c in ['0', '1'])
+                                 Analyzer._read_while_with_one(text, position + 2, lambda c: c in ['0', '1'])
                 result.append((ID, 'Binary Literal', binary_literal))
                 ID += 1
                 position += len(binary_literal) + 2
                 continue
 
             if current_char.isdigit():
-                literal = LexicalAnalyzer._read_while_with_two(text, position,
-                                                               lambda c: c.isdigit() or c in ['.', 'E', 'E'],
-                                                               lambda c, next_c: c in ['E', 'e'] and next_c in ['+',
+                literal = Analyzer._read_while_with_two(text, position,
+                                                        lambda c: c.isdigit() or c in ['.', 'E', 'E'],
+                                                        lambda c, next_c: c in ['E', 'e'] and next_c in ['+',
                                                                                                                 '-'])
                 # Error 1
                 if literal.count('.') > 1:
@@ -51,7 +51,7 @@ class LexicalAnalyzer:
                 continue
 
             if current_char.isalpha():
-                identifier = LexicalAnalyzer._read_while_with_one(text, position, lambda c: c.isalnum())
+                identifier = Analyzer._read_while_with_one(text, position, lambda c: c.isalnum())
 
                 # Error 2
                 if len(result) > 1 and result[-1][2].isnumeric():
@@ -75,8 +75,8 @@ class LexicalAnalyzer:
                 continue
 
             if len(result) > 1 and result[-1][2] == 'include' and current_char == '<':
-                identifier = LexicalAnalyzer._read_while_with_one(text, position,
-                                                                  lambda c: c.isalpha() or c in ['.', '>', '<', '"'])
+                identifier = Analyzer._read_while_with_one(text, position,
+                                                           lambda c: c.isalpha() or c in ['.', '>', '<', '"'])
                 result.append((ID, 'Identifier', identifier))
 
                 ID += 1
@@ -88,7 +88,7 @@ class LexicalAnalyzer:
                 ID += 1
                 position += 1
 
-                literal = LexicalAnalyzer._read_while_with_one(text, position, lambda c: c != current_char)
+                literal = Analyzer._read_while_with_one(text, position, lambda c: c != current_char)
 
                 parts = re.split(r'(?<!\\)(\\n|\\t)', literal)
                 while '' in parts:
@@ -108,7 +108,7 @@ class LexicalAnalyzer:
                 continue
 
             if current_char in OPERATORS:
-                operator = LexicalAnalyzer._read_while_with_one(text, position, lambda c: c in OPERATORS)
+                operator = Analyzer._read_while_with_one(text, position, lambda c: c in OPERATORS)
 
                 # Error 3
                 if len(result) > 1 and result[-1][2] + operator in INVALID_OPERATORS:

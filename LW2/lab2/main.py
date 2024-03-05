@@ -1,4 +1,4 @@
-from lexical_analyzer import LexicalAnalyzer
+from analyzer import Analyzer
 from tabulate import tabulate
 
 
@@ -6,7 +6,7 @@ if __name__ == '__main__':
     with open('input.cpp', 'r', encoding='utf-8') as file:
         text = file.read()
 
-    result = LexicalAnalyzer.analyze(text)
+    result = Analyzer.analyze(text)
 
     headers = ['Number', 'Category', 'Value']
 
