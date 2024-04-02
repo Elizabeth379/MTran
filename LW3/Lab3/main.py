@@ -8,6 +8,7 @@ file_path_output = 'output.txt'
 
 errors = {'missing': [], 'extra': []}
 
+
 def balance_check(code):
 
     double_quotes_count = 0
@@ -117,6 +118,7 @@ def lexer():
         write_output_to_file(output, file_path_output)
 
     return token_classification_list
+
 
 if __name__ == "__main__":
     lexer()

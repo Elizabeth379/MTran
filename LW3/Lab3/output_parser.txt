@@ -3,9 +3,26 @@
         |- Header file: <iostream>
     |- PreprocessorDirective: #include
         |- Header file: <string>
+    |- Function: int function
+        |- Parameters: Parameters
+            |- Declare: int k
+        |- Block: int
+            |- StdNamespace: std
+            |- Colon: ::
+            |- Cout: cout
+                |- Operator Input: <<
+                |- Variable: int k
+            |- Statement: ;
+        |- End Block: function
     |- Function: int main
         |- Parameters: Parameters
         |- Block: int
+            |- Declare Array: int arr
+                |- Square Block: arr
+                    |- Operator: -
+                    |- Value: int 1
+                |- End Square Block: ]
+            |- Statement: ;
             |- StdNamespace: std
             |- Colon: ::
             |- Declare: string text
@@ -20,17 +37,11 @@
             |- Statement: ;
             |- Declare: int n
                 |- Assignment: =
-                |- Variable: string text
-                    |- DotOperator: .
-                    |- Method f: length
-                        |- Parameters: Parameters
+                |- Value: int 13
             |- Statement: ;
             |- Declare: int m
                 |- Assignment: =
-                |- Variable: string pattern
-                    |- DotOperator: .
-                    |- Method f: length
-                        |- Parameters: Parameters
+                |- Value: int 5
             |- Statement: ;
             |- Declare: int pos
                 |- Assignment: =

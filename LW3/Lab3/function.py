@@ -6,6 +6,7 @@ stack_string = []
 #         code = file.read()
 #     return code
 
+
 def read_code_from_file(file_path):
     with open(file_path, 'r') as file:
         code = file.read()

@@ -268,7 +268,6 @@ def tokenize(code):
             combined_tokens.append((list_tokens[i], token_lines[i]))
             i += 1
 
-
     return combined_tokens
 
 

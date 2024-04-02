@@ -17,6 +17,7 @@ table_scope = {}
 
 pattern = r'\((.*?)\)'
 
+
 def check_match(element: str, identifiers):
     ident = [iden[0] for iden in identifiers]
     keyws = list(keywords.keys())
@@ -41,6 +42,7 @@ def check_match(element: str, identifiers):
             max_match = string
 
     return max_match
+
 
 def classify_token(token, prev_token, next_token, token_table):
     if token in keywords:
@@ -113,14 +115,14 @@ def classify_token(token, prev_token, next_token, token_table):
                 data_type = list_data_types[-1]
                 list_data_types.pop()
                 if next_token == '(':
-                    token_table[token] = '1ARITHMETIC OPERATOR'
-                    return '1ARITHMETIC OPERATOR'
+                    token_table[token] = 'ARITHMETIC OPERATOR'
+                    return 'ARITHMETIC OPERATOR'
                 if prev_token == ')':
                     if next_token == '(':
-                        token_table[token] = '2ARITHMETIC OPERATOR'
-                        return '2ARITHMETIC OPERATOR'
-                    token_table[token] = '3ARITHMETIC OPERATOR'
-                    return '3ARITHMETIC OPERATOR'
+                        token_table[token] = 'ARITHMETIC OPERATOR'
+                        return 'ARITHMETIC OPERATOR'
+                    token_table[token] = 'ARITHMETIC OPERATOR'
+                    return 'ARITHMETIC OPERATOR'
                 if ((prev_token in token_table and f'VARIABLE ({data_type.upper()})' in token_table[
                     prev_token]) \
                         or (prev_token in token_table and f'FUNCTION DEC (FOINTER {data_type.upper()})' in
@@ -154,8 +156,8 @@ def classify_token(token, prev_token, next_token, token_table):
                     or (next_token in token_table and f'METHOD OF CLASS'):
                     token_table[token] = 'ASTERIK'
                     return 'ASTERIK'
-                token_table[token] = '5ARITHMETIC OPERATOR'
-                return '5ARITHMETIC OPERATOR'
+                token_table[token] = 'ARITHMETIC OPERATOR'
+                return 'ARITHMETIC OPERATOR'
         if token in ('+', '&', '='):
             if prev_token:
                 if prev_token in ('&', '+', '-', '='):

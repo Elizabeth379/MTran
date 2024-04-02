@@ -1,10 +1,16 @@
 #include <iostream>
 #include <string>
+
+int function(int k) {
+std::cout << k;
+}
+
 int main() {
+    int arr[-1];
     std::string text = "Hello, world!";
     std::string pattern = "world";
-    int n = text.length();
-    int m = pattern.length();
+    int n = 13;
+    int m = 5;
     int pos = -1;
     for (int i = 0; i <= n - m; ++i) {
         int j;
