@@ -6,7 +6,7 @@ std::cout << k;
 }
 
 int main() {
-    int arr[-1];
+    int arr[1];
     std::string text = "Hello, world!";
     std::string pattern = "world";
     int n = 13;

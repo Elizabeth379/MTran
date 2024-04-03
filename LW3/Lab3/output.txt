@@ -27,7 +27,6 @@
 |  9     |int                                |DATA TYPE                                           
 |  9     |arr                                |ARRAY (int)                                         
 |  9     |[                                  |PARENTHESIS                                         
-|  9     |-                                  |ARITHMETIC OPERATOR                                 
 |  9     |1                                  |INTEGER                                             
 |  9     |]                                  |PARENTHESIS                                         
 |  9     |;                                  |END OF CONSTRUCTION                                 

@@ -19,7 +19,6 @@
         |- Block: int
             |- Declare Array: int arr
                 |- Square Block: arr
-                    |- Operator: -
                     |- Value: int 1
                 |- End Square Block: ]
             |- Statement: ;
