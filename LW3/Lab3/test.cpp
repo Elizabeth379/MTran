@@ -15,15 +15,21 @@ int main() {
     for (int i = 0; i <= n - m; ++i) {
         int j;
         for (j = 0; j < m; ++j) {
+
             if (text[i + j] != pattern[j]) {
                 break;
             }
         }
+
         if (j == m) {
             pos = i;
             break;
+
         }
+        int ks;
     }
+
+    ks=8;
     if (pos != -1) {
         std::cout << "Pattern found at position: " << pos << std::endl;
     } else {

@@ -108,7 +108,13 @@
                             |- Break: break
                             |- Statement: ;
                         |- End Block: if
+                    |- Declare: int ks
+                    |- Statement: ;
                 |- End Block: for
+            |- Variable: int ks
+                |- Assignment: =
+                |- Value: int 8
+            |- Statement: ;
             |- IfStatement: if
                 |- Parameters: Parameters
                     |- Variable: int pos
@@ -126,8 +132,7 @@
                             |- Operator Input: <<
                             |- StdNamespace: std
                             |- Colon: ::
-                        |- Statement: ;
-                    |- Endl: endl
+                            |- Endl: endl
                     |- Statement: ;
                 |- End Block: if
             |- ElseStatement: else
@@ -140,9 +145,10 @@
                         |- Operator Input: <<
                         |- StdNamespace: std
                         |- Colon: ::
-                    |- Endl: endl
+                        |- Endl: endl
                     |- Statement: ;
                 |- End Block: else
             |- ReturnStatement: return
                 |- Value: int 0
+                |- Statement: ;
         |- End Block: main

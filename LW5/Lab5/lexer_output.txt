@@ -1,0 +1,322 @@
+   POS                   TYPE                       VALUE       
+---------- -------------------------------- --------------------
+[1:10]     LexemeTypes.KEY_WORD             KeyWords.INCLUDE    
+[1:12]     LexemeTypes.OPERATOR             Operators.LESS      
+[1:12]     LexemeTypes.IDENTIFIER           Identifier-ID: 0    
+[1:21]     LexemeTypes.OPERATOR             Operators.GREATER   
+[2:06]     LexemeTypes.KEY_WORD             KeyWords.USING      
+[2:16]     LexemeTypes.KEY_WORD             KeyWords.NAMESPACE  
+[2:17]     LexemeTypes.IDENTIFIER           Identifier-ID: 1    
+[2:20]     LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[4:05]     LexemeTypes.KEY_WORD             KeyWords.VOID       
+[4:06]     LexemeTypes.IDENTIFIER           Identifier-ID: 2    
+[4:15]     LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[4:19]     LexemeTypes.KEY_WORD             KeyWords.INT        
+[4:21]     LexemeTypes.OPERATOR             Operators.MULTIPLY  
+[4:21]     LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[4:26]     LexemeTypes.DELIMITER            Delimiters.COMMA    
+[4:31]     LexemeTypes.KEY_WORD             KeyWords.INT        
+[4:32]     LexemeTypes.IDENTIFIER           Identifier-ID: 4    
+[4:37]     LexemeTypes.DELIMITER            Delimiters.COMMA    
+[4:42]     LexemeTypes.KEY_WORD             KeyWords.INT        
+[4:43]     LexemeTypes.IDENTIFIER           Identifier-ID: 5    
+[4:47]     LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[5:01]     LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[6:08]     LexemeTypes.KEY_WORD             KeyWords.INT        
+[6:09]     LexemeTypes.IDENTIFIER           Identifier-ID: 6    
+[6:12]     LexemeTypes.DELIMITER            Delimiters.COMMA    
+[6:14]     LexemeTypes.IDENTIFIER           Identifier-ID: 7    
+[6:19]     LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[7:08]     LexemeTypes.KEY_WORD             KeyWords.INT        
+[7:09]     LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[7:12]     LexemeTypes.OPERATOR             Operators.EQUAL     
+[7:13]     LexemeTypes.IDENTIFIER           Identifier-ID: 4    
+[7:18]     LexemeTypes.DELIMITER            Delimiters.COMMA    
+[7:20]     LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[7:23]     LexemeTypes.OPERATOR             Operators.EQUAL     
+[7:24]     LexemeTypes.IDENTIFIER           Identifier-ID: 5    
+[7:28]     LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[8:05]     LexemeTypes.IDENTIFIER           Identifier-ID: 6    
+[8:10]     LexemeTypes.OPERATOR             Operators.EQUAL     
+[8:11]     LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[8:16]     LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[8:17]     LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[8:18]     LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[8:21]     LexemeTypes.OPERATOR             Operators.PLUS      
+[8:22]     LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[8:23]     LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[8:26]     LexemeTypes.OPERATOR             Operators.SLASH     
+[8:27]     LexemeTypes.INT_NUM              Constant-ID: 0      
+[8:28]     LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[8:28]     LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[10:07]    LexemeTypes.KEY_WORD             KeyWords.DO         
+[10:08]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[11:14]    LexemeTypes.KEY_WORD             KeyWords.WHILE      
+[11:15]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[11:16]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[11:21]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[11:22]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[11:23]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[11:25]    LexemeTypes.OPERATOR             Operators.LESS      
+[11:26]    LexemeTypes.IDENTIFIER           Identifier-ID: 6    
+[11:29]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[11:31]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[11:32]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[11:34]    LexemeTypes.OPERATOR             Operators.INCREMENT 
+[11:35]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[11:37]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[12:14]    LexemeTypes.KEY_WORD             KeyWords.WHILE      
+[12:15]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[12:16]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[12:21]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[12:22]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[12:23]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[12:25]    LexemeTypes.OPERATOR             Operators.GREATER   
+[12:26]    LexemeTypes.IDENTIFIER           Identifier-ID: 6    
+[12:29]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[12:31]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[12:32]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[12:34]    LexemeTypes.OPERATOR             Operators.DECREMENT 
+[12:35]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[12:37]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[13:11]    LexemeTypes.KEY_WORD             KeyWords.IF         
+[13:12]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[13:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[13:16]    LexemeTypes.OPERATOR             Operators.LESS_EQUAL
+[13:18]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[13:19]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[14:09]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[15:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 7    
+[15:20]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[15:21]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[15:26]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[15:27]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[15:28]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[15:28]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[16:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[16:18]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[16:19]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[16:20]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[16:22]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[16:23]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[16:28]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[16:29]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[16:30]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[16:30]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[17:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[17:18]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[17:19]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[17:20]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[17:22]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[17:23]    LexemeTypes.IDENTIFIER           Identifier-ID: 7    
+[17:28]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[18:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[18:15]    LexemeTypes.OPERATOR             Operators.INCREMENT 
+[18:16]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[19:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[19:15]    LexemeTypes.OPERATOR             Operators.DECREMENT 
+[19:16]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[20:09]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[21:05]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[21:11]    LexemeTypes.KEY_WORD             KeyWords.WHILE      
+[21:12]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[21:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[21:16]    LexemeTypes.OPERATOR             Operators.LESS      
+[21:17]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[21:18]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[21:19]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[23:07]    LexemeTypes.KEY_WORD             KeyWords.IF         
+[23:08]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[23:09]    LexemeTypes.IDENTIFIER           Identifier-ID: 4    
+[23:16]    LexemeTypes.OPERATOR             Operators.LESS      
+[23:17]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[23:18]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[24:05]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[25:09]    LexemeTypes.IDENTIFIER           Identifier-ID: 2    
+[25:18]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[25:19]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[25:24]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[25:26]    LexemeTypes.IDENTIFIER           Identifier-ID: 4    
+[25:31]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[25:33]    LexemeTypes.IDENTIFIER           Identifier-ID: 9    
+[25:34]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[25:35]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[26:05]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[28:07]    LexemeTypes.KEY_WORD             KeyWords.IF         
+[28:08]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[28:09]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[28:12]    LexemeTypes.OPERATOR             Operators.LESS      
+[28:13]    LexemeTypes.IDENTIFIER           Identifier-ID: 5    
+[28:17]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[29:05]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[30:09]    LexemeTypes.IDENTIFIER           Identifier-ID: 2    
+[30:18]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[30:19]    LexemeTypes.IDENTIFIER           Identifier-ID: 3    
+[30:24]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[30:26]    LexemeTypes.IDENTIFIER           Identifier-ID: 8    
+[30:27]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[30:29]    LexemeTypes.IDENTIFIER           Identifier-ID: 5    
+[30:33]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[30:34]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[31:05]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[32:01]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[34:05]    LexemeTypes.KEY_WORD             KeyWords.VOID       
+[34:06]    LexemeTypes.IDENTIFIER           Identifier-ID: 27   
+[34:16]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[34:20]    LexemeTypes.KEY_WORD             KeyWords.INT        
+[34:22]    LexemeTypes.OPERATOR             Operators.MULTIPLY  
+[34:22]    LexemeTypes.IDENTIFIER           Identifier-ID: 28   
+[34:25]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[34:30]    LexemeTypes.KEY_WORD             KeyWords.INT        
+[34:31]    LexemeTypes.IDENTIFIER           Identifier-ID: 29   
+[34:35]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[35:01]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[36:08]    LexemeTypes.KEY_WORD             KeyWords.FOR        
+[36:09]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[36:13]    LexemeTypes.KEY_WORD             KeyWords.INT        
+[36:14]    LexemeTypes.IDENTIFIER           Identifier-ID: 30   
+[36:17]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[36:18]    LexemeTypes.INT_NUM              Constant-ID: 1      
+[36:19]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[36:21]    LexemeTypes.IDENTIFIER           Identifier-ID: 30   
+[36:24]    LexemeTypes.OPERATOR             Operators.LESS      
+[36:25]    LexemeTypes.IDENTIFIER           Identifier-ID: 29   
+[36:29]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[36:31]    LexemeTypes.IDENTIFIER           Identifier-ID: 30   
+[36:33]    LexemeTypes.OPERATOR             Operators.INCREMENT 
+[36:34]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[37:05]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[38:13]    LexemeTypes.KEY_WORD             KeyWords.COUT       
+[38:15]    LexemeTypes.OPERATOR             Operators.LEFT_SHIFT
+[38:17]    LexemeTypes.IDENTIFIER           Identifier-ID: 28   
+[38:20]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[38:21]    LexemeTypes.IDENTIFIER           Identifier-ID: 30   
+[38:22]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[38:24]    LexemeTypes.OPERATOR             Operators.LEFT_SHIFT
+[38:27]    LexemeTypes.STRING               Constant-ID: 2      
+[38:29]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[39:05]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[40:09]    LexemeTypes.KEY_WORD             KeyWords.COUT       
+[40:11]    LexemeTypes.OPERATOR             Operators.LEFT_SHIFT
+[40:17]    LexemeTypes.KEY_WORD             KeyWords.ENDL       
+[40:17]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[41:01]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES
+[43:04]    LexemeTypes.KEY_WORD             KeyWords.INT        
+[43:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 32   
+[43:09]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[43:10]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[44:01]    LexemeTypes.DELIMITER            Delimiters.OPEN_BRACES
+[45:08]    LexemeTypes.KEY_WORD             KeyWords.INT        
+[45:09]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[45:12]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[45:13]    LexemeTypes.INT_NUM              Constant-ID: 3      
+[45:14]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[45:14]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[45:16]    LexemeTypes.IDENTIFIER           Identifier-ID: 34   
+[45:17]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[47:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[47:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[47:09]    LexemeTypes.INT_NUM              Constant-ID: 1      
+[47:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[47:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[47:13]    LexemeTypes.INT_NUM              Constant-ID: 4      
+[47:15]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[48:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[48:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[48:09]    LexemeTypes.INT_NUM              Constant-ID: 5      
+[48:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[48:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[48:14]    LexemeTypes.OPERATOR             Operators.MINUS     
+[48:14]    LexemeTypes.INT_NUM              Constant-ID: 6      
+[48:17]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[49:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[49:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[49:09]    LexemeTypes.INT_NUM              Constant-ID: 0      
+[49:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[49:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[49:13]    LexemeTypes.INT_NUM              Constant-ID: 7      
+[49:15]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[50:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[50:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[50:09]    LexemeTypes.INT_NUM              Constant-ID: 8      
+[50:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[50:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[50:13]    LexemeTypes.INT_NUM              Constant-ID: 9      
+[50:15]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[51:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[51:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[51:09]    LexemeTypes.INT_NUM              Constant-ID: 10     
+[51:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[51:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[51:14]    LexemeTypes.OPERATOR             Operators.MINUS     
+[51:14]    LexemeTypes.INT_NUM              Constant-ID: 5      
+[51:15]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[52:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[52:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[52:09]    LexemeTypes.INT_NUM              Constant-ID: 11     
+[52:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[52:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[52:13]    LexemeTypes.INT_NUM              Constant-ID: 10     
+[52:14]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[53:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[53:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[53:09]    LexemeTypes.INT_NUM              Constant-ID: 12     
+[53:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[53:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[53:13]    LexemeTypes.INT_NUM              Constant-ID: 13     
+[53:16]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[54:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[54:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[54:09]    LexemeTypes.INT_NUM              Constant-ID: 14     
+[54:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[54:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[54:13]    LexemeTypes.INT_NUM              Constant-ID: 13     
+[54:16]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[55:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[55:08]    LexemeTypes.DELIMITER            Delimiters.LEFT_BRACKET
+[55:09]    LexemeTypes.INT_NUM              Constant-ID: 15     
+[55:10]    LexemeTypes.DELIMITER            Delimiters.RIGHT_BRACKET
+[55:12]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[55:13]    LexemeTypes.INT_NUM              Constant-ID: 16     
+[55:15]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[57:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 34   
+[57:08]    LexemeTypes.OPERATOR             Operators.EQUAL     
+[57:09]    LexemeTypes.INT_NUM              Constant-ID: 3      
+[57:10]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[59:09]    LexemeTypes.KEY_WORD             KeyWords.COUT       
+[59:11]    LexemeTypes.OPERATOR             Operators.LEFT_SHIFT
+[59:15]    LexemeTypes.STRING               Constant-ID: 17     
+[59:24]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[60:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 27   
+[60:15]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[60:16]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[60:19]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[60:21]    LexemeTypes.IDENTIFIER           Identifier-ID: 34   
+[60:22]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[60:23]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[62:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 2    
+[62:14]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[62:15]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[62:18]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[62:20]    LexemeTypes.INT_NUM              Constant-ID: 1      
+[62:21]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[62:23]    LexemeTypes.IDENTIFIER           Identifier-ID: 34   
+[62:26]    LexemeTypes.OPERATOR             Operators.MINUS     
+[62:27]    LexemeTypes.INT_NUM              Constant-ID: 5      
+[62:28]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[62:29]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[64:09]    LexemeTypes.KEY_WORD             KeyWords.COUT       
+[64:11]    LexemeTypes.OPERATOR             Operators.LEFT_SHIFT
+[64:16]    LexemeTypes.STRING               Constant-ID: 18     
+[64:33]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[66:05]    LexemeTypes.IDENTIFIER           Identifier-ID: 27   
+[66:15]    LexemeTypes.DELIMITER            Delimiters.OPEN_PARENTHESIS
+[66:16]    LexemeTypes.IDENTIFIER           Identifier-ID: 33   
+[66:19]    LexemeTypes.DELIMITER            Delimiters.COMMA    
+[66:21]    LexemeTypes.IDENTIFIER           Identifier-ID: 34   
+[66:22]    LexemeTypes.DELIMITER            Delimiters.CLOSE_PARENTHESIS
+[66:23]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[68:11]    LexemeTypes.KEY_WORD             KeyWords.RETURN     
+[68:12]    LexemeTypes.INT_NUM              Constant-ID: 1      
+[68:13]    LexemeTypes.DELIMITER            Delimiters.SEMICOLON
+[69:01]    LexemeTypes.DELIMITER            Delimiters.CLOSE_BRACES

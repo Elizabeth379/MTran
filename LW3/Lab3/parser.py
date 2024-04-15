@@ -4,11 +4,11 @@ from function import write_output_to_file
 from main import lexer
 from constants import data_types, keywords, standart_libraries, operators
 import re
-
-pattern = r'\((.*?)\)'
-numbers = r'\d+'
-commas = r','
-semicolon = r';'
+#
+# pattern = r'\((.*?)\)'
+# numbers = r'\d+'
+# commas = r','
+# semicolon = r';'
 
 variable_types = {}
 variable_scope = []
@@ -178,6 +178,7 @@ def build_syntax_tree(tokens):
     if_stack = []
     return_stack = []
     class_stack = []
+    else_stack = []
     struct_stack = []
     object_stack = []
     function_stack = []
@@ -247,9 +248,14 @@ def build_syntax_tree(tokens):
                                 temp_scope = True
                     if temp_scope:
                         break
-                variable_node = Node(token, 'Declare', data_stack[-1].lower())
-                data_stack.pop()
-                is_value = True
+                if current_node.type in ('Declare', 'Variable'):
+                    semantic_error_node = Node(token, 'Semantic error!')
+                    current_node.add_child(semantic_error_node)
+                    break
+                else:
+                    variable_node = Node(token, 'Declare', data_stack[-1].lower())
+                    data_stack.pop()
+                    is_value = True
             else:
                 if token not in variable_types:
                     first_children = current_node.children[-1]
@@ -371,6 +377,7 @@ def build_syntax_tree(tokens):
                     semantic_error_node = Node(token, 'Semantic error! The array parameter must be an integer.')
                     current_node.add_child(semantic_error_node)
                     break
+
             current_node = square_stack.pop()
             square_node = Node(token, 'End Square Block')
             current_node.add_child(square_node)
@@ -500,11 +507,25 @@ def build_syntax_tree(tokens):
                 # if current_node.name == 'ForLoop':
                 #     for_num += 1
 
+        if token == '<':
+            if current_node.type == 'Cout':
+                syntax_error_node = Node(token, 'Syntax error!')
+                current_node.add_child(syntax_error_node)
+                break
+
+        if token == '>':
+            if current_node.type == 'Cin':
+                syntax_error_node = Node(token, 'Syntax error!')
+                current_node.add_child(syntax_error_node)
+                break
+
 
         if token == "}":
+            temp_list = []
+            if current_node.type == 'Block' and current_node.name == 'Block':
+                temp_list.append(current_node)
             temp_node = current_node.parent
             if temp_node.type == 'Declare Array' or temp_node.type == 'Array':
-                temp_list = []
                 temp_list.extend(current_node.children)
                 sum_comma = 0
                 sum_values = 0
@@ -512,6 +533,11 @@ def build_syntax_tree(tokens):
                 for i in temp_list:
                     if i.name == ',':
                         sum_comma += 1
+                    if i.type == 'Block':
+                        sum_values += 1
+                        continue
+                    if i.type == 'End Block':
+                        continue
                     else:
                         sum_values += 1
 
@@ -522,15 +548,14 @@ def build_syntax_tree(tokens):
                     semantic_error_node = Node(token, 'Semantic error! The number of elements in the array exceeds the declared parameter.')
                     current_node.add_child(semantic_error_node)
                     break
-                if sum_comma >= sum_values or (sum_values - sum_comma) >= 2:
-                    syntax_error_node = Node('Missing comma', f'Syntax error!')
-                    current_node.add_child(syntax_error_node)
-                    break
+                # if sum_comma >= sum_values or (sum_values - sum_comma) >= 2:
+                #     syntax_error_node = Node('Missing comma', f'Syntax error!')
+                #     current_node.add_child(syntax_error_node)
+                #     break
 
             current_node = branch_stack.pop()
             close_branch_node = Node(current_node.name, 'End Block')
             if current_node.name == 'ForLoop':
-                print('YES')
                 for_num -= 1
             if current_node.type == 'ForLoop':
                 current_node.add_child(close_branch_node)
@@ -538,10 +563,7 @@ def build_syntax_tree(tokens):
             elif current_node.type == 'Constructure':
                 current_node.add_child(close_branch_node)
                 current_node = branch_stack.pop()
-            elif current_node.type == 'IfStatement':
-                current_node.add_child(close_branch_node)
-                current_node = if_stack.pop()
-            elif current_node.type == 'ElseStatement':
+            elif current_node.type in ('IfStatement', 'ElseStatement', 'ElseIfStatement'):
                 current_node.add_child(close_branch_node)
                 current_node = if_stack.pop()
             elif current_node.type == 'Function':
@@ -563,7 +585,7 @@ def build_syntax_tree(tokens):
                 current_node = class_stack.pop()
 
         if token == "(":
-            if current_node.type == "Function" or current_node.type == 'Function Call' or current_node.type == 'ForLoop' or current_node.type == 'Method f' or current_node.type == 'Object' or current_node.type == 'Constructure' or current_node.type == "ProgramType" or current_node.type == "WhileLoop" or current_node.type == "IfStatement":
+            if current_node.type == "Function" or current_node.type == 'Function Call' or current_node.type == 'ForLoop' or current_node.type == 'Method f' or current_node.type == 'Object' or current_node.type == 'Constructure' or current_node.type == "ProgramType" or current_node.type == "WhileLoop" or current_node.type == "IfStatement" or current_node.type == 'ElseIfStatement' or current_node.type == 'ElseStatement':
                 if current_node.type == 'ForLoop':
                     for_num += 1
                 parameters_list_node = Node("Parameters", "Parameters")
@@ -592,6 +614,16 @@ def build_syntax_tree(tokens):
                 while sum != 0:
                     current_node = variable_stack.pop()
                     sum -= 1
+
+            # sum = 0
+            # for i in if_stack:
+            #     sum += 1
+            # if sum > 0:
+            #     while sum != 0:
+            #         current_node = if_stack.pop()
+            #         if current_node.type == 'ElseStatement' or current_node.type == 'ElseIfStatement' or current_node.type == 'IfStatement':
+            #             break
+            #         sum -= 1
             bracket_node = Node(token, 'Bracket')
 
             if current_node.type == 'Bracket':
@@ -797,15 +829,6 @@ def build_syntax_tree(tokens):
                     current_node.add_child(syntax_error_node)
                     break
 
-            # if len(std_stack) != 0:
-            #     sum = 0
-            #     for i in std_stack:
-            #         sum += 1
-            #     if sum > 0:
-            #         while sum != 0:
-            #             current_node = std_stack.pop()
-            #             sum -= 1
-
             if len(variable_stack) != 0:
                 sum = 0
                 for i in variable_stack:
@@ -817,28 +840,14 @@ def build_syntax_tree(tokens):
                         sum -= 1
 
             if len(std_stack) != 0:
-                current_node = std_stack.pop()
-            sum_std = 0
-            for i in std_stack:
-                if current_node.type in ('Cin', 'Cout'):
-                    sum_std += 1
-            if sum_std > 0:
-                while sum_std != 0:
-                    current_node = std_stack.pop()
-                    sum_std -= 1
-
-            # if current_node.type in ('Cin', 'Cout'):
-            #     if len(std_stack) != 0:
-            #         current_node = std_stack.pop()
-            #     sum_std = 0
-            #     for i in std_stack:
-            #         if current_node.type in ('Cin', 'Cout'):
-            #             sum_std += 1
-            #     if sum_std > 0:
-            #         while sum_std != 0:
-            #             current_node = std_stack.pop()
-            #             sum_std -= 1
-
+                sum = 0
+                for i in std_stack:
+                    if current_node.type in ('Cin', 'Cout', 'Endl'):
+                        sum += 1
+                if sum > 0:
+                    while sum != 0:
+                        current_node = std_stack.pop()
+                        sum -= 1
 
             if current_node.type == 'Object':
                 if len(object_stack) != 0:
@@ -941,7 +950,6 @@ def build_syntax_tree(tokens):
         if token == "std":
             std_node = Node(token, "StdNamespace")
             current_node.add_child(std_node)
-            parent_node = current_node
 
             semicolon_present = False
             for tok, _, ln in tokens:
@@ -965,22 +973,6 @@ def build_syntax_tree(tokens):
                 current_node.add_child(syntax_error_node)
                 break
 
-        if token in ('cout', 'cin'):
-            if token == 'cout':
-                method_node = Node(token, 'Cout')
-            if token == 'cin':
-                method_node = Node(token, 'Cin')
-
-            std_stack.append(current_node)
-            current_node.add_child(method_node)
-            current_node = method_node
-
-        if token == 'endl':
-            method_node = Node(token, 'Endl')
-            if len(std_stack) != 0:
-                current_node = std_stack.pop()
-                current_node.add_child(method_node)
-
         if token == "<<" or token == ">>":
             io_operator_node = Node(token, 'Operator Input')
             current_node.add_child(io_operator_node)
@@ -988,6 +980,22 @@ def build_syntax_tree(tokens):
         if token_type == 'ARITHMETIC OPERATOR':
             arithmetic_operator_node = Node(token, "Operator")
             current_node.add_child(arithmetic_operator_node)
+
+        if token == "cout" and token_type == 'KEYWORD':
+            cout_node = Node(token, "Cout")
+            std_stack.append(current_node)
+            current_node.add_child(cout_node)
+            current_node = cout_node
+
+        if token == "cin" and token_type == 'KEYWORD':
+            cin_node = Node(token, "Cin")
+            std_stack.append(cin_node)
+            current_node.add_child(cin_node)
+            current_node = cin_node
+
+        if token == "endl" and token_type == 'KEYWORD':
+            endl_node = Node(token, "Endl")
+            current_node.add_child(endl_node)
 
         if token == "for" and token_type == 'KEYWORD':
             for_node = ForNode(token, "ForLoop")
@@ -1004,6 +1012,12 @@ def build_syntax_tree(tokens):
             syntax_error_node = Node(token, f'Syntax error! In line {line}')
             current_node.add_child(syntax_error_node)
             break
+
+        if token == 'else if' and token_type == 'KEYWORD':
+            if_node = IfNode(token, 'ElseIfStatement')
+            if_stack.append(current_node)
+            current_node.add_child(if_node)
+            current_node = if_node
 
         if token == 'else' and token_type == 'KEYWORD':
             else_node = IfNode(token ,'ElseStatement')
@@ -1093,5 +1107,6 @@ def parser():
         write_output_to_file(syntax_tree.display(), file_path_output)
 
         return syntax_tree
+
 
 parser()
