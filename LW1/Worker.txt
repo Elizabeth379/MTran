@@ -1,0 +1,58 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Worker {
+  public:
+    void discover_average_AP();
+    void set_average_AP(double score);
+    double get_average_AP();
+    void set_name(string a);
+    string get_name();
+    void set_academic_performance(vector<int> v);
+  private:
+    double average_AP;
+    string name; // имя
+    vector<int> academic_performance;
+};
+
+void Worker::discover_average_AP() {
+    // Реализация функции
+}
+
+void Worker::set_average_AP(double score) {
+    average_AP = score;
+}
+
+double Worker::get_average_AP() {
+    return average_AP;
+}
+
+void Worker::set_name(string a) {
+    name = a;
+}
+
+string Worker::get_name() {
+    return name;
+}
+
+void Worker::set_academic_performance(vector<int> v) {
+    academic_performance = v;
+}
+
+int main() {
+    Worker worker;
+    worker.set_name("Иван");
+    worker.set_average_AP(4.5);
+    vector<int> performance = {5, 4, 3, 4, 5, 4};
+    worker.set_academic_performance(performance);
+
+    cout << "Имя: " << worker.get_name() << endl;
+    cout << "Средний балл: " << worker.get_average_AP() << endl;
+    cout << "Оценки: ";
+    cout << endl;
+
+    return 0;
+}

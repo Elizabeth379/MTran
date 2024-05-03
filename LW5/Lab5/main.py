@@ -3,7 +3,6 @@ from tools.translator import *
 from tools.tree_parser import *
 from tools.semantic_parser import *
 
-
 def br():
     """
         Prints text separator.
@@ -85,7 +84,7 @@ def printVariables(variables):
 
 def main():
     # Define the testing files name
-    fileName = "main.cpp"
+    fileName = "file.cpp"
 
     # Define tables for the literals and variables
     literalTable = LiteralTable()
@@ -93,40 +92,44 @@ def main():
 
     try:
         # Perform lexical analysis
-        lexAnalyzer = LexicalAnalyzer(fileName, literalTable, variableTable)
+        #lexAnalyzer = LexicalAnalyzer(fileName, literalTable, variableTable)
 
         # Get resulting lexemes from the analyzer
-        lexemes = lexAnalyzer.GetLexemes()
-        parser = TreeParser(fileName, lexemes, literalTable, variableTable)
+        #lexemes = lexAnalyzer.GetLexemes()
+        #parser = TreeParser(fileName, lexemes, literalTable, variableTable)
 
         # Check for semantic errors
-        root = parser.GetTree()
-        semantic_parser = SemanticParser(fileName, root, literalTable, variableTable)
+        #root = parser.GetTree()
+        #semantic_parser = SemanticParser(fileName, root, literalTable, variableTable)
 
         # Clear variable table
-        variableTable = [var for var in variableTable if var.itemType != Language.VariableTypes.UNKNOWN]
-        br()
+        #variableTable = [var for var in variableTable if var.itemType != Language.VariableTypes.UNKNOWN]
+        #br()
 
         # Parsed lexemes
         #print("\t⇒ LEXEMES:\n")
-        printLexemes(lexemes)
+        #printLexemes(lexemes)
 
         # Parsed literals
-        print("\t⇒ LITERAL TABLE:\n")
-        printLiterals(literalTable.Literals)
+        #print("\t⇒ LITERAL TABLE:\n")
+        #printLiterals(literalTable.Literals)
 
         # Parsed variables
-        print("\t⇒ VARIABLE TABLE:\n")
-        printVariables(variableTable)
+        #print("\t⇒ VARIABLE TABLE:\n")
+        #printVariables(variableTable)
 
         # Syntax tree
-        print("\t⇒ Syntax tree:\n")
-        parser.PrintSyntaxTree()
+        #print("\t⇒ Syntax tree:\n")
+        #parser.PrintSyntaxTree()
 
         # Translate CPP AST to Python
         br()
-        #print("\t⇒ Translated code output:\n")
+        print("\t⇒ Translated code output:\n")
         #translator = Translator(root, literalTable, variableTable)
+        subprocess.run(["python", "compile.py", "-i", "file"])
+
+
+
 
     except LexicalAnalyzerError as ex:
         print(ex)
